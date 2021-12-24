@@ -1,4 +1,4 @@
-###Intro
+**Intro**
 <p>
 An application for managing mentor/mentee relationships at the Baytree
 Centre in London. There are 3 components to the application. The
@@ -12,7 +12,7 @@ The frontend is implemented with React TypeScript and the backend is implemented
 with Java Spring boot.
 </p>
 
-###My accomplishments
+**My accomplishments**<br>
 The project was built by eight people. Below is the list of my features.
 1. <b>Designed the user-frontend:</b> I designed a prototype for a user-frontend website and
    successfully implemented it with HTML, CSS, and React. The website is responsive
