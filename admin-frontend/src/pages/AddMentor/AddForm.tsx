@@ -59,7 +59,7 @@ export const AddForm: React.FC<Props> = ({mentor})=> {
                 <Col sm={"7"}>
                     <Form.Control type={"text"} placeholder={"Password *"}
                                   name={"password"} value={password}
-                                   onChange={(e) => setPassword(e.target.value)}
+                                  onChange={(e) => setPassword(e.target.value)}
                                   required />
                 </Col>
             </Form.Group>

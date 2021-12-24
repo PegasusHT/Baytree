@@ -38,16 +38,19 @@ public class AppUserController {
     private final AppUserService appUserService;
 
     @GetMapping("/user/login")
+    @CrossOrigin(origins = "http://localhost:3000")
     public boolean userExists(@RequestBody Authentication authentication) {
         return appUserService.checkIfUserExists(authentication.getUsername(), authentication.getPassword());
     }
 
     @GetMapping("/users")
+    @CrossOrigin(origins = "http://localhost:3000")
     public ResponseEntity<List<AppUser>> getUsers() {
         return ResponseEntity.ok().body(appUserService.getUsers());
     }
 
     @PostMapping("/user/save")
+    @CrossOrigin(origins = "http://localhost:3000")
     public ResponseEntity<AppUser> saveUser(@RequestBody AppUser user) {
         URI uri = URI.create(ServletUriComponentsBuilder.fromCurrentContextPath().path("/api/user/save").toString());
         return ResponseEntity.created(uri).body(appUserService.saveUser(user));

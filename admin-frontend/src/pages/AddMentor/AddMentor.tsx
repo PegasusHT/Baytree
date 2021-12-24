@@ -49,12 +49,6 @@ function AddMentor() {
 
     const addUser = async (id: number, updatedMentor: any) => {
 
-        // // change mentor's information
-        // setMentors(mentors.map((mentor) => mentor.id === id ? updatedMentor : mentor))
-        //
-        // // delete mentor in the unregisted mentors list
-        // setMentors(mentors.filter(mentor => mentor.id !== id))
-
         await axios.post<Mentor>('http://localhost:8080/user/add', {
             username: updatedMentor.firstName,
             password: updatedMentor.password
