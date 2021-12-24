@@ -1,11 +1,32 @@
-**Intro**
-
+###Intro
 <p>
 An application for managing mentor/mentee relationships at the Baytree
 Centre in London. There are 3 components to the application. The
-<b>user-frontend</b> is seen by the mentor when they want to upload information regarding mentoring sessions or access resources. The <b>admin-frontend</b> allows an administrator at Baytree to manage accounts, access statistics, etc. The backend is used to receive and process API requests from the frontends as well as manage the database.
+<b>user-frontend</b> is seen by the mentor when they want to upload information 
+regarding mentoring sessions or access resources. 
+The <b>admin-frontend</b> allows an administrator at Baytree to manage accounts, access statistics, etc. 
+The backend is used to receive and process API requests 
+from the frontends as well as manage the database. The client is using the Views application, 
+an application to manage the employees. Therefore, we use some data from the Views database also by sending API requests.
+The frontend is implemented with React TypeScript and the backend is implemented
+with Java Spring boot.
 </p>
 
+###My accomplishments
+The project was built by eight people. Below is the list of my features.
+1. <b>Designed the user-frontend:</b> I designed a prototype for a user-frontend website and
+   successfully implemented it with HTML, CSS, and React. The website is responsive
+   and has nice-looking layouts for laptop and mobile screen sizes.
+2. <b>Developed mentor feature:</b> It's a feature in the admin-frontend. The application will
+   get the mentor data from the Views database, and display a list of unregistered mentors in our database.
+   The admin can select a mentor, set the password, and create that user in our database.
+3. <b>Created backend for goals feature:</b>
+   I developed the models, endpoints for the goals feature. We can send API requests
+   to create, get all goals or specific goal data, or delete a goal.
+   I also created some test functions to test the goal backend to make sure
+   it works fine.
+
+### Requirements to run application
 **User-Frontend**
 <p>
 Make sure you have Node Package Manager installed before attempting to run the user-frontend. To start the user-frontend, change directory to user-frontend in your terminal. Then enter npm install in terminal. Then enter npm start. The application should start in a browser.  
@@ -27,44 +48,5 @@ Make sure you have Node Package Manager installed before attempting to run the a
         - When in file "BaytreeMentoringApplication" to run the application simply click the run button on the line number 9.    
     - The server should be up and running 
 
-
-
-**Send POST Request through POSTMAN**
-(Make sure you are connected to the SFU VPN)
-
-
-- `http://localhost:8080/session/add`
-
-Formatting Example: { {"menteeId":7145682,"clockInTimeLocal":"2021-10-20 06:21:55 -0800","clockOutTimeLocal":"2021- 10-25 11:25:38 -0800", "sessionNotes":"Notes3"}
-
-Test if the added session is returend using the GET API mentioned below
-
-- `http://localhost:8080/session/add`
-
-Formatting Example: 
-`{ "username": "anonsnx", "password": "testtwo" }`
-
-Test if the added users username and password is retrived using the GET API mentioned below
-
-
-
-**Send GET Request through POSTMAN**
-(Make sure you are connected to the SFU VPN)
-
-
-- `http://localhost:8080/session/get/all`
-Displays all the data stored for the sessions on our backend MySql database (hosted on the VM)
-
-
-- `http://localhost:8080/user/get/all`
-Displays all the username and passwords stored for the test users on our backend MySql database (hosted on the VM)
-
-
-**Send DELETE Request through POSTMAN**
-
-(Make sure you are connected to the SFU VPN)
-
-- `http://localhost:8080/session/delete/{sessionid}`
-
-Example: "http://localhost:8080/session/delete/1", if I want to delete the first item
+- You have to connect to the SFU VPN to get the data, since we use the SFU Virtual Machine.
 
