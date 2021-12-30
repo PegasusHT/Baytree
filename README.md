@@ -25,6 +25,8 @@ The project was built by eight people. Below is the list of my features.
    to create, get all goals or specific goal data, or delete a goal.
    I also created some test functions to test the goal backend to make sure
    it works fine.
+4. <b>Home page for admin-frontend:</b>
+   I included a chart for admin-frontend, pulled data from Views.
 
 ### Requirements to run application
 **User-Frontend**
